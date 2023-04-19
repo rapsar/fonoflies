@@ -1,0 +1,5 @@
+nnoise:
+Data from Fort Collins 2021 06 24 cam 1 mov 2 (A1m52)
+Frame 20000 to 22400
+
+(To make a text file, do from console: touch file.txt)
