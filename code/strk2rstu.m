@@ -22,7 +22,7 @@ for i=1:length(strk.xyzts)
     xyzt = strk.xyzts{i};
 
     r = vecnorm(xyzt(1,1:3)); 
-    s = sin(atan2(xyzt(1,2),xyzt(1,1))); 
+    s = cos(atan2(xyzt(1,2),xyzt(1,1))); 
     t = xyzt(1,4); 
     u = xyzt(end,4)-xyzt(1,4)+1;
 
