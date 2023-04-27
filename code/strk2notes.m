@@ -20,11 +20,11 @@ end
 
 % streaks to rstu array
 rstu = strk2rstu(strk);
-nn = size(rstu,1);
 
 % extract corresponding rows
 f = (rstu(:,3) >=strFrame) & (rstu(:,3) <= endFrame);
 notes = rstu(f,:);
+nn = size(notes,1);
 
 % add random/semirandom notes in col 5
 notes(:,5) = pitch(nn);
@@ -39,7 +39,7 @@ notes(:,3) = notes(:,3)-notes(1,3)+1;
 notes(:,3:4) = notes(:,3:4)/frameRate;
 
 % plot histogram for checking
-n = histcounts(notes(:,6),0:max(notes(:,6)));
+n = histcounts(notes(:,6)-notes(1,6)+1,'BinMethod','integers');
 figure, plot(n)
 
 end
